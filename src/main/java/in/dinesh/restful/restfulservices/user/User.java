@@ -1,5 +1,6 @@
 package in.dinesh.restful.restfulservices.user;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
 
@@ -10,6 +11,7 @@ public class User {
 
     private long id;
     @Size(min = 2 , message = "Name should not be less than two(2) characters")
+    @JsonProperty("User_name")
     private String name;
     @Past(message = "Date of birth should be in past")
     private LocalDate birthDate;
