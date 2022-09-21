@@ -1,12 +1,13 @@
 package in.dinesh.restful.restfulservices.filtering;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonFilter("SomeBeamFilter")
 public class SomeBean {
     public String field1;
     public String field2;
-    @JsonIgnore
     public String field3;
 
     public String getField1() {
